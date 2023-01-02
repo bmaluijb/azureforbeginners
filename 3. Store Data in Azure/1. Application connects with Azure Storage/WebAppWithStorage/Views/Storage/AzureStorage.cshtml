@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@using (Html.BeginForm("AzureStorage", "Storage", FormMethod.Post, new
+{  
+    enctype = "multipart/form-data"  
+}))  
+
+{
+    <h1 class="display-4">Upload an image</h1>
+    <label for="fimage">Image:</label>
+    <br>
+  
+    <input type="file" name="fimage" />
+    <br />
+    <br />
+    <input type="submit" value="Upload image" />
+}
